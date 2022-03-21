@@ -11,7 +11,7 @@ public class Main {
 
         dataTable.deleteColumn();
 
-        System.out.println("Конечная");
+        System.out.println("Обновленная");
         dataTable.showAllTable();
 
         dataTable.addRow();
@@ -19,9 +19,7 @@ public class Main {
         System.out.println(dataTable.column("column_name2", 2));
         dataTable.setValue("Hello", 1,1);
 
+        System.out.println("Обновленная");
         dataTable.showAllTable();
-
-
-
     }
 }
