@@ -1,17 +1,12 @@
-package valdes.com.company;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class DataTable implements Table {
-    private String value;
-    private String columnName;
     private HashMap<String, ArrayList> stringHashMap = new HashMap();
     private ArrayList<ArrayList<String>> mainList = new ArrayList<>();
 
-    public String getValue() {
-        return value;
+    public DataTable() {
     }
 
     public void setValue(String value, int row, int column) {
@@ -22,13 +17,12 @@ public class DataTable implements Table {
     @Override
     public HashMap<String, ArrayList> column(String s, int column) {
         ArrayList<String> names = new ArrayList<>();
+
         for (int i = 0; i <= mainList.size()-1; i++) {
             names.add(mainList.get(i).get(column-1));
         }
 
-        stringHashMap.put("column_name1", names);
-
-
+        stringHashMap.put("column_name2", names);
         return stringHashMap;
     }
 
